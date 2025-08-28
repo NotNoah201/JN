@@ -2,86 +2,70 @@
 <html>
 <head>
   <title>Title</title>
-  <style>
-    .body {
-      background-color: lightblue;
-      font-family: 'Times New Roman', Times, serif;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 50px;
-      text-align: center;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      font-size: 50px;
-      color: #ff6347;
-    }
-
-    .info {
-      padding: 20px;
-      background-color: #2196F3; /* kept only one */
-      color: white;
-      transition: opacity 0.6s;
-      margin-bottom: 15px;
-    }
-.nav-button {
-    padding: 12px 24px;
-    background-color: #2563eb; /* Nice blue */
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    margin: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-.nav-button:hover {
-    background-color: #1d4ed8; /* Darker blue on hover */
-    transform: translateY(-2px);
-  }
-  
-.nav-button:active {
-    transform: translateY(0);
-  }
-.nav-container {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    margin-top: 40px;
-  }
-.nav-button:focus {
-    outline: 2px solid #1d4ed8;
-    outline-offset: 2px;
-  }
-
-    p {
-      font-family: Verdana, sans-serif;
-      font-size: 20px;
-    }
-  </style>
 </head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 <body>
-  <div class="container wrapper">
-    <div id="top">
-      <h1>REVISE-RIGHT</h1>
-    </div>
 
-<div class="nav-container">
-    <button class="nav-button" onclick="window.location.href='page1.html'">Page 1</button>
-    <button class="nav-button" onclick="window.location.href='page2.html'">Page 2</button>
-</div>
 
-    <div class="text-block">
-      <p>Paragraph</p>
-    </div>
 
-    <div class="info">
-      Super awesomeness
-    </div>
-  </div>
+<body>
+  <div class="container">
+    <aside id="sidebar">
+      <ul>
+      <li>
+      <span class="logo">REVISE RIGHT</span>
+      
+      <button id="toggle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M160-360v-80h640v80H160Zm0 160v-80h640v80H160Zm0-320v-80h640v80H160Zm0-160v-80h640v80H160Z"/></svg>
+      </button>
+      </li>
+      <li class="active">
+      <a href="page1.html">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+      <span>Home</span>
+      </a>
+      </li>
+      <li>
+      <button class="dropdown-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z"/></svg>
+      <span>Subject</span>
+      </button>
+      <ul class="sub-menu">
+      <li><a href="#">Maths</a></li>
+      <li><a href="#">Science</a></li>
+      <li><a href="#">History</a></li>
+      <li><a href="#">Geography</a></li>
+      <li><a href="#">English</a></li>
+      </ul>
+      </li>
+      <li>
+      <a href="page2.html">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M424-320q0-81 14.5-116.5T500-514q41-36 62.5-62.5T584-637q0-41-27.5-68T480-732q-51 0-77.5 31T365-638l-103-44q21-64 77-111t141-47q105 0 161.5 58.5T698-641q0 50-21.5 85.5T609-475q-49 47-59.5 71.5T539-320H424Zm56 240q-33 0-56.5-23.5T400-160q0-33 23.5-56.5T480-240q33 0 56.5 23.5T560-160q0 33-23.5 56.5T480-80Z"/></svg>
+      <span>Information</span>
+      </a>
+      </li>
+      </ul>
+      </aside>
+      
+      <script>
+      // Sidebar collapse toggle
+      const sidebar = document.getElementById("sidebar");
+      const toggleBtn = document.getElementById("toggle-btn");
+      
+      toggleBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("collapsed");
+      });
+      
+      // Dropdown toggle
+      document.querySelector(".dropdown-btn").addEventListener("click", (e) => {
+      e.preventDefault();
+      const submenu = e.currentTarget.nextElementSibling;
+      submenu.classList.toggle("show");
+      });
+      </script>
+      </body>
+      </html>
 
-</body>
 </html>
