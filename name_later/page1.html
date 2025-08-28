@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Title</title>
+  <style>
+    .body {
+      background-color: lightblue;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 50px;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      font-size: 50px;
+      color: #ff6347;
+    }
+
+    .info {
+      padding: 20px;
+      background-color: #2196F3; /* kept only one */
+      color: white;
+      transition: opacity 0.6s;
+      margin-bottom: 15px;
+    }
+.nav-button {
+    padding: 12px 24px;
+    background-color: #2563eb; /* Nice blue */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+.nav-button:hover {
+    background-color: #1d4ed8; /* Darker blue on hover */
+    transform: translateY(-2px);
+  }
+  
+.nav-button:active {
+    transform: translateY(0);
+  }
+.nav-container {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+.nav-button:focus {
+    outline: 2px solid #1d4ed8;
+    outline-offset: 2px;
+  }
+
+    p {
+      font-family: Verdana, sans-serif;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container wrapper">
+    <div id="top">
+      <h1>REVISE-RIGHT</h1>
+    </div>
+
+<div class="nav-container">
+    <button class="nav-button" onclick="window.location.href='page1.html'">Page 1</button>
+    <button class="nav-button" onclick="window.location.href='page2.html'">Page 2</button>
+</div>
+
+    <div class="text-block">
+      <p>Paragraph</p>
+    </div>
+
+    <div class="info">
+      Super awesomeness
+    </div>
+  </div>
+
+</body>
+</html>
