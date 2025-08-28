@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Title</title>
+
 <style>
 body {
   background-color: lightblue;
+  font-family:'Times New Roman', Times, serif;
 }
 
 h1 {
-  color: white;
   text-align: center;
 }
-
+.info {
+    padding: 20px;
+    background-color: #002ec5;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+    background-color: #2196F3
+}
+.main-image {
+    position: relative;
+    font-family: Arial;
+}
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 p {
   font-family: verdana;
   font-size: 20px;
@@ -19,8 +42,22 @@ p {
 </head>
 <body>
 
-<h1>Header goes here</h1>
-<p>Paragraph goes here</p>
+<div class="container wrapper">
+    <div id="top">
+        <h1>Header</h1>
+    </div>
+    <div id="main">
+        <div class="main-image">
+            <img src ="Kevin.jpg"
+            alt="Kevin Gabor" style="width:100%;">
+            <div class="text-block">
+                <p>Paragraph</p>
+            </div>
+        </div>
+        <div class="info">Super awesomeness
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
