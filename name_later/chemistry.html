@@ -8,27 +8,140 @@
   <style>
     body {
       margin: 0;
+      font-family: 'Arial', sans-serif;
     }
+
+    header#top-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background-color: #222;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1000;
+    }
+
     #sidebar {
       width: 250px; 
       background-color: #454545; 
-      position: sticky;
-      top: 0;
+      position: fixed;
+      top: 60px;
+      bottom: 0;
+      left: 0;
+      padding: 20px;
+      overflow-y: auto;
+      color: white;
     }
+
     .container {
-      position: relative;
-      bottom: 675px;
-      flex: 1; 
-      padding: 30px; 
-      order: 1; /* Move the container to the left */
-      
+      padding: 30px;
+      margin-left: 270px; /* leaves space for sidebar */
+      margin-top: 60px;   /* leaves space for header */
+      display: flex;
       flex-direction: column;
-      justify-content: flex-start; /* Align items to the top */
       align-items: center;
-      height: calc(100vh - 60px); /* Full height minus the header height */
-      margin-top: 0; /* Remove margin to position the container directly below the header */
-      margin-left: 300px; /* Move the container slightly to the right */
+      box-sizing: border-box;
+      margin-bottom: 250px;
+      margin-top: 100px;
     }
+
+    .vid_resourse {
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 800px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .vid_resourse h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #333;
+      text-align: center;
+    }
+
+    .vid_resourse p {
+      font-size: 16px;
+      color: #555;
+      margin: 20px 0 10px;
+    }
+
+    .vid_resourse a {
+      display: inline-block;
+      margin: 8px 10px;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.2s ease;
+      font-weight: bold;
+    }
+
+    .vid_resourse a:hover {
+      background-color: #005fa3;
+    }
+
+    /* Sidebar dropdown */
+    .sub-menu {
+      display: none;
+      padding-left: 20px;
+    }
+
+    .sub-menu.show {
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 15px 0;
+    }
+
+    ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 18px;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .header-right input {
+      padding: 5px;
+    }
+
+    #profile-btn {
+      padding: 5px 10px;
+      margin-left: 10px;
+    }
+    .site-footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      width: 100%;
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+}
   </style>
 </head>
 <body>
@@ -43,63 +156,90 @@
   </div>
 </header>
 
-  <aside id="sidebar">
-    <ul>
-      <li>
-        <span class="logo">REVISE RIGHT</span>
-        <button id="toggle-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M160-360v-80h640v80H160Zm0 160v-80h640v80H160Zm0-320v-80h640v80H160Zm0-160v-80h640v80H160Z"/></svg>
-        </button>
-      </li>
-      <li class="active">
-        <a href="page1.html">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
-          <span>Home</span>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="dropdown-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z"/></svg>
-          <span>Subject</span>
-        </a>
-        <ul class="sub-menu">
-          <li><a href="maths.html">Maths</a></li>
-          <li><a href="english.html">English</a></li>
-          <li><a href="physics.html">physics</a></li>
-          <li><a href="chemistry.html">chemistry</a></li>
-          <li><a href="biology.html">biology</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="page2.html">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M424-320q0-81 14.5-116.5T500-514q41-36 62.5-62.5T584-637q0-41-27.5-68T480-732q-51 0-77.5 31T365-638l-103-44q21-64 77-111t141-47q105 0 161.5 58.5T698-641q0 50-21.5 85.5T609-475q-49 47-59.5 71.5T539-320H424Zm56 240q-33 0-56.5-23.5T400-160q0-33 23.5-56.5T480-240q33 0 56.5 23.5T560-160q0 33-23.5 56.5T480-80Z"/></svg>
-          <span>Information</span>
-        </a>
-      </li>
-    </ul>
-  </aside>
-  
-  <script>
-    // Sidebar collapse toggle
-    const sidebar = document.getElementById("sidebar");
-    const toggleBtn = document.getElementById("toggle-btn");
-    
-    toggleBtn.addEventListener("click", () => {
-      sidebar.classList.toggle("collapsed");
-    });
-    
-    // Dropdown toggle
-    document.querySelector(".dropdown-btn").addEventListener("click", (e) => {
-      e.preventDefault();
-      const submenu = e.currentTarget.nextElementSibling;
-      submenu.classList.toggle("show");
-    });
-  </script>
+<aside id="sidebar">
+  <ul>
+    <li>
+      <span class="logo">REVISE RIGHT</span>
+      <button id="toggle-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M160-360v-80h640v80H160Zm0 160v-80h640v80H160Zm0-320v-80h640v80H160Zm0-160v-80h640v80H160Z"/></svg>
+      </button>
+    </li>
+    <li class="active">
+      <a href="page1.html">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+        <span>Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="dropdown-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z"/></svg>
+        <span>Subject</span>
+      </a>
+      <ul class="sub-menu">
+        <li><a href="maths.html">Maths</a></li>
+        <li><a href="english.html">English</a></li>
+        <li><a href="physics.html">Physics</a></li>
+        <li><a href="chemistry.html">Chemistry</a></li>
+        <li><a href="biology.html">Biology</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="page2.html">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M424-320q0-81 14.5-116.5T500-514q41-36 62.5-62.5T584-637q0-41-27.5-68T480-732q-51 0-77.5 31T365-638l-103-44q21-64 77-111t141-47q105 0 161.5 58.5T698-641q0 50-21.5 85.5T609-475q-49 47-59.5 71.5T539-320H424Zm56 240q-33 0-56.5-23.5T400-160q0-33 23.5-56.5T480-240q33 0 56.5 23.5T560-160q0 33-23.5 56.5T480-80Z"/></svg>
+        <span>Information</span>
+      </a>
+    </li>
+  </ul>
+</aside>
 
 <div class="container">
-    <h2>Welcome to Revise Right</h2>
-    <p>Your one-stop platform for all your revision needs!</p>
-    <p>Explore various subjects and resources to enhance your learning experience.</p>
+  <div class="vid_resourse">
+    <h2>Chemistry Video resources</h2>
+    <p>chemistry GCSE</p>
+    <a href="eng1.html"> year 1</a>
+    <a href="eng2.html"> year 2</a>
+    <p>chemisty ALEVEL</p>
+    <a href="alevelchem1.html"> year 1</a>
+    <a href="alevelchem2.html"> year 2</a>
+    <p>click on these page links which will give videos for each topic of the year based on which we think is the best for GCSE.</p>
+    <p>we have also provided some ALEVEL resources for chemistry</p>
+  </div>
 </div>
+
+<script>
+  // Sidebar collapse toggle
+  const sidebar = document.getElementById("sidebar");
+  const toggleBtn = document.getElementById("toggle-btn");
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("collapsed");
+  });
+
+  // Dropdown toggle
+  document.querySelector(".dropdown-btn").addEventListener("click", (e) => {
+    e.preventDefault();
+    const submenu = e.currentTarget.nextElementSibling;
+    submenu.classList.toggle("show");
+  });
+</script>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>Follow us:</p>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+        <img src="facebook-.png" alt="Facebook" />
+      </a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+        <img src="twitter-.png" alt="Twitter" />
+      </a>
+      <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+        <img src="tiktok-.png" alt="TikTok" />
+      </a>
+    </div>
+    <p class="copyright">© 2025 Your Website. All rights reserved.</p>
+  </div>
+</footer>
+
 </body>
 </html>
