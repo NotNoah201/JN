@@ -7,16 +7,27 @@
   <link rel="stylesheet" href="style3.css">
   <style>
     body {
-      display: flex;
       margin: 0;
     }
     #sidebar {
       width: 250px; 
       background-color: #454545; 
+      position: sticky;
+      top: 0;
     }
     .container {
+      position: relative;
+      bottom: 675px;
       flex: 1; 
-      padding: 20px; 
+      padding: 30px; 
+      order: 1; /* Move the container to the left */
+      
+      flex-direction: column;
+      justify-content: flex-start; /* Align items to the top */
+      align-items: center;
+      height: calc(100vh - 60px); /* Full height minus the header height */
+      margin-top: 0; /* Remove margin to position the container directly below the header */
+      margin-left: 300px; /* Move the container slightly to the right */
     }
   </style>
 </head>
@@ -84,5 +95,12 @@
       submenu.classList.toggle("show");
     });
   </script>
+
+<div class="container">
+    <h2>Welcome to Revise Right</h2>
+    <p>Your one-stop platform for all your revision needs!</p>
+    <p>Explore various subjects and resources to enhance your learning experience.</p>
+</div>
 </body>
 </html>
+
