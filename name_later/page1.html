@@ -11,34 +11,57 @@
       font-family: Arial, sans-serif;
       background-image: url('back.jpg');
       background-size: cover;
+      
     }
     #sidebar {
       width: 250px; 
       background-color: #454545; 
       position: sticky;
       top: 0;
+      z-index: 0;
+      height: 100vh;
     }
     .container {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin: 40px auto 20px;
+      color: #222;
+      font-family: 'Arial', sans-serif;
       position: relative;
       bottom: 675px;
       flex: 1; 
       padding: 30px; 
-      order: 1; /* Move the container to the left */
+      order: 1; 
       
       flex-direction: column;
-      justify-content: flex-start; /* Align items to the top */
+      justify-content: flex-start;
       align-items: center;
-      height: calc(100vh - 60px); /* Full height minus the header height */
-      margin-top: 0; /* Remove margin to position the container directly below the header */
-      margin-left: 300px; /* Move the container slightly to the right */
+      height: calc(100vh - 60px); 
+      margin-top: 0; 
+      margin-left: 300px; 
     }
+  .site-footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
   </style>
 </head>
 <body>
 
 <header id="top-header">
   <div class="header-left">
-    <h1>Revise Right</h1>
+    <h1>ReviseRight.com</h1>
   </div>
   <div class="header-right">
     <input type="text" placeholder="Search...">
@@ -104,7 +127,26 @@
     
     <p>Your one-stop platform for all your revision needs!</p>
     <p>Explore various subjects and resources to enhance your learning experience.</p>
-    <img src="studypic.jpg" alt="Description" width="300" height="auto">
+    <img src="studypic.jpg" alt="Description" width="300" height="auto" alt="Centered Image" class="center-image">
+
+    
 </div>
 </body>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>Follow us:</p>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+        <img src="facebook-icon.png" alt="Facebook" />
+      </a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+        <img src="twitter-icon.png" alt="Twitter" />
+      </a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <img src="instagram-icon.png" alt="Instagram" />
+      </a>
+    </div>
+    <p class="copyright">© 2025 Your Website. All rights reserved.</p>
+  </div>
+</footer>
 </html>
