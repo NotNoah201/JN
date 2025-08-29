@@ -23,12 +23,13 @@ line-height: 1.6;
 }
 
 .body {
-min-height: 100vh;
-min-height: 100dvh;
-background-color: var(--base-clr);
-color: var(--text-clr);
-display: grid;
-grid-template-columns: auto 1fr;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  background-image: url('grey.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 #sidebar {
