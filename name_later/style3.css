@@ -198,3 +198,9 @@ margin: 20px auto;
 #top-header button#profile-btn:hover {
   background-color: #777;
 }
+
+#sidebar.collapsed .dropdown-btn {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -218,9 +218,15 @@
   // Dropdown toggle
   document.querySelector(".dropdown-btn").addEventListener("click", (e) => {
     e.preventDefault();
+      
+    if (sidebar.classList.contains("collapsed")) {
+      return;
+    }
+
     const submenu = e.currentTarget.nextElementSibling;
     submenu.classList.toggle("show");
   });
+  
 </script>
 
 <footer class="site-footer">
