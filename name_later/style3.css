@@ -38,7 +38,12 @@ border-right: 1px solid var(--line-clr);
 position: sticky;
 top: 0;
 transition: width 0.3s ease;
+
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+overflow: hidden;
 }
+
 
 #sidebar ul {
 list-style: none;
@@ -197,10 +202,4 @@ margin: 20px auto;
 
 #top-header button#profile-btn:hover {
   background-color: #777;
-}
-
-#sidebar.collapsed .dropdown-btn {
-  pointer-events: none;
-  opacity: 0.5;
-  cursor: not-allowed;
 }
