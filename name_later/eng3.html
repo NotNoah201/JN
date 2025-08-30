@@ -22,25 +22,42 @@
       height: 100vh;
     }
     .container {
-      font-size: 24px;
-      font-weight: bold;
-      text-align: center;
-      margin: 40px auto 20px;
-      color: #222;
-      font-family: 'Arial', sans-serif;
-      position: relative;
-      bottom: 660px;
-      flex: 1; 
-      padding: 30px; 
-      order: 1; 
-      
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      height: calc(200vh - 60px); 
-      margin-top: 0; 
-      margin-left: 300px; 
-    }
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #222;
+    font-family: 'Arial', sans-serif;
+
+    /* Layout fixes */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    /* Spacing */
+    padding: 30px;
+    margin: 40px auto 20px;
+
+    /* Positioning (adjust or remove as needed) */
+    position: relative;
+    bottom: 660px;
+    margin-left: 300px;
+
+    /* Height settings */
+    height: calc(200vh - 60px);
+}
+
+.container a {
+    display: block;
+    margin: 10px 0;
+    color: #0645AD; /* optional styling */
+    text-decoration: none;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
   .site-footer {
   background-color: #333;
   color: #fff;
@@ -123,24 +140,19 @@
   </script>
 
 <div class="container">
-    <h1>PAPER 1</h1>
-    <h2>AQA</h2>
-    <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FpZYuwHhQOA?si=gBmmWalEOCZQoLtF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
+    <h1>YOUTUBE LINKS + MODEL ANSWERS</h1>
+    <h2>language+structure</h2>
+    <a href = "https://youtu.be/6zXBiAuPQ_Y?si=TjDqfJwSrVT-7g7z" >first-rate-tutors techniques
+    </a>
+    <a href = "https://youtu.be/ymL88ythSao?si=pmgHx1R_g1CNTT2R">mr-everything-english 25-language devices
+    </a>
+    <a href = "https://youtu.be/Q5E0v5PgjSg?si=udNKqBg2y_yeLT2V">first-rate-tutors paper 1&2 The difference
 
-    <h2>EDEXCEL</h2>
-    <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Dvpp5Ja0gfY?si=2RKdhtZMSONe4BfM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <h2>OCR</h2>
-    <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/JV1Orvx4--U?si=HfNgJJlVPHhT3TTR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
 
-    <p>>credits to all creators follow them on youtube></p>
-    <p>* videos change based on veiwer request *</p>
-
+    </a>
+    <h3>Evaluate</h3>
+    <a href = "https://youtu.be/pFPK0wCZQBc?si=DOAhXkoQ67jZmhrr">mr-salles Evaluate (edexcel)</a>
+    <a href = ""></a>
     
 </div>
 </body>
