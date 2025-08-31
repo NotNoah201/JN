@@ -38,10 +38,6 @@ border-right: 1px solid var(--line-clr);
 position: sticky;
 top: 0;
 transition: width 0.3s ease;
-
-border-top-right-radius: 20px;
-border-bottom-right-radius: 20px;
-overflow: hidden;
 }
 
 
@@ -111,10 +107,9 @@ transition: all 0.3s ease-in-out;
 #sidebar .sub-menu.show {
 display: block;
 opacity: 1;
-max-height: 500px; /* enough to expand smoothly */
+max-height: 500px;
 }
 
-/* Collapsed Sidebar */
 #sidebar.collapsed {
 width: 80px;
 padding: 20px 10px;
