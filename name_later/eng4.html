@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Revise-right.com</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style3.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('Lang.jpg');
+      background-size: cover;
+    }
+
+    #sidebar {
+      width: 250px; 
+      background-color: #454545; 
+      position: sticky;
+      top: 0;
+      z-index: 0;
+      height: 100vh;
+    }
+
+    header#top-header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: #222;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      height: 60px;
+      z-index: 1000;
+    }
+
+    nav#navbar {
+      width: 100%;
+      height: 50px;
+      background-color: #454545;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: sticky;
+      top: 60px;
+      z-index: 999;
+    }
+
+    nav#navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav#navbar a {
+      color: #fff;
+      padding: 10px 15px;
+      text-decoration: none;
+    }
+
+    .container {
+      font-family: 'Arial', sans-serif;
+      color: #222;
+      margin-left: 240px;
+      margin-top: 100px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column; /* stack text and books vertically */
+      gap: 20px;
+      width: calc(100% - 320px); /* account for sidebar width and margin */
+    }
+
+    .container h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+
+    .container p {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .book-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .book-card {
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 8px;
+      width: 200px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .book-card img {
+      width: 150px;
+      border-radius: 4px;
+    }
+
+    .book-card p {
+      font-size: 14px;
+      margin-top: 10px;
+      color: #222;
+    }
+
+    .site-footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      width: 100%;
+      font-size: 14px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .social-icons img {
+      width: 24px;
+      margin: 0 8px;
+    }
+  </style>
+</head>
+<body>
+
+<header id="top-header">
+  <div class="header-left">
+    <h1>ReviseRight.com</h1>
+  </div>
+  <div class="header-right">
+    <input type="text" placeholder="Search...">
+    <button id="profile-btn">Profile</button>
+  </div>
+</header>
+
+<nav id="navbar">
+  <ul>
+    <li class="active"><a href="page1.html">Home</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-btn">Subject</a>
+      <ul class="sub-menu">
+        <li><a href="maths.html">Maths</a></li>
+        <li><a href="english.html">English</a></li>
+        <li><a href="physics.html">Physics</a></li>
+        <li><a href="chemistry.html">Chemistry</a></li>
+        <li><a href="biology.html">Biology</a></li>
+      </ul>
+    </li>
+    <li><a href="page2.html">Information</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <h1>English language Study & Revision Items</h1>
+  <p>Recommended revsion tools</p>
+
+  <div class="book-items">
+    <div class="book-card">
+      <a href="https://amzn.eu/d/iF6qgcY" target="_blank" rel="noopener noreferrer">
+        <img src="eng1item.jpg" alt="English book">
+        <p>£8.24 - CGP GCSE English Language AQA Complete Revision & Practice</p>
+      </a>
+    </div>
+
+    <div class="book-card">
+      <a href="https://amzn.eu/d/j6sbCvo" target="_blank" rel="noopener noreferrer">
+        <img src="eng2item.jpg" alt="English item">
+        <p>£6.74 - Pearson REVISE AQA GCSE English Language Revision Cards</p>
+      </a>
+    </div>
+
+    <div class="book-card">
+        <a href="https://amzn.eu/d/fa3YGtJ" target="_blank" rel="noopener noreferrer">
+          <img src="eng3item.jpg" alt="English book">
+          <p>£5.06 - GCSE English Language Edexcel Revision Guide</p>
+        </a>
+    </div>
+
+    <div class="book-card">
+      <a href="https://amzn.eu/d/3OV47v3" target="_blank" rel="noopener noreferrer">
+        <img src="eng4item.jpg".jpg" alt="English book">
+        <p>£7.49 - GCSE English Language WJEC Eduqas Complete Revision & Practice</p>
+      </a>
+    </div>
+        <p>items change depending on veiwer suggestions so to suggest click here.....</p>
+</div>
+</div>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>Follow us:</p>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook" /></a>
+      <a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter" /></a>
+      <a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram" /></a>
+    </div>
+    <p class="copyright">© 2025 Your Website. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
